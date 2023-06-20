@@ -1,9 +1,11 @@
 // declare main package
 package main
-// import fmt library for formatting and printing text
+// import libraries 
 import "fmt"
-// implement the main function and print the text to console
+import "rsc.io/quote"
+// run main function
 func main() {
 	fmt.Println("Hello, world!")
+	fmt.Println(quote.Go())
 }
 // run the app with `go run .`
