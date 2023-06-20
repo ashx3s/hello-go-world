@@ -26,3 +26,13 @@ Go comes with built in packages for common asks. Check the [Go Standard Library]
   - [Guidelines for Developing and Publishing Modules](https://go.dev/doc/modules/developing)
   - avoid common names like: widgets, utilities, or app
   - **descriptive-text** should use the project name, package names carry most of the weight of describing functionality.
+
+### Local Modules
+- Move module file into it's own directory and set up `go.mod` file
+  - in this repo it's the greeting/ directory
+- In the caller directory (hello/), initialize as normal `go mod init example.com/hello`  
+- run this command from the hello directory:
+  - `go mod edit -replace example.com/greetings=../greetings`
+    - this will get it to read from the greetings/ dir and not from example.com/greetings
+  - then run `go mod tidy` to sync the changes
+- then you can run the hello module and successfuly use your greetings module with `go run .`

@@ -1,11 +1,15 @@
 // declare main package
 package main
 // import libraries 
-import "fmt"
-import "rsc.io/quote"
+import  (
+"fmt"
+"example.com/greetings"
+)
 // run main function
 func main() {
-	fmt.Println("Hello, world!")
-	fmt.Println(quote.Go())
+	// print Hello Gladys
+	message := greetings.Hello("Gladys")
+	fmt.Println(message)
 }
 // run the app with `go run .`
+
