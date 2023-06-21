@@ -22,7 +22,7 @@ func randomFormat() string {
 	formats := []string {
 		"Hi, %v. Welcome!",
 		"Great to see you, %v!",
-		"Hail, %v, Well met!"
+		"Hail, %v, Well met!",
 	}
 	// return a randomly selected message format
 	return formats[rand.Intn(len(formats))]
